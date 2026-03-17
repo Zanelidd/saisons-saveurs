@@ -32,8 +32,7 @@ src/
 │   ├── recipe.types.ts         # RecipeDetail
 │   ├── user.types.ts           # Diet, UserPrefs
 │   ├── fav.types.ts            # FavItem
-│   ├── api.types.ts            # Raw Spoonacular response types
-│   └── index.ts               # Barrel export
+│   └── api.types.ts            # Raw Spoonacular response types
 │
 ├── data/
 │   └── veggies.data.ts         # 40 vegetables with monthly availability
