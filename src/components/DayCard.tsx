@@ -113,28 +113,28 @@ export function DayCard({
                             <div className={s.mealTop}>
                                 <div className={s.mealLabel}>{t(labelKey)}</div>
                                 <div className={s.mealBody}>
+                                    <RecipePanel recipeId={meal.id} diet={diet} persons={persons} accent={accent}>
 
-                                    {/* Nom + bouton recette à droite */}
-                                    <div className={s.mealNameRow}>
-                                        <span className={s.mealNameText}>{meal.plat}</span>
-                                        <RecipePanel
-                                            recipeId={meal.id}
-                                            diet={diet}
-                                            persons={persons}
-                                            accent={accent}
-                                        />
-                                    </div>
-
-                                    {/* Macros */}
-                                    {meal.kcal > 0 && (
-                                        <div className={s.macros}>
-                                            <span className={`${s.pill} ${s.pillKcal}`}>{t("meal.kcal",    { value: meal.kcal })}</span>
-                                            <span className={`${s.pill} ${s.pillP}`}   >{t("meal.protein", { value: meal.proteines })}</span>
-                                            <span className={`${s.pill} ${s.pillG}`}   >{t("meal.carbs",   { value: meal.glucides })}</span>
-                                            <span className={`${s.pill} ${s.pillL}`}   >{t("meal.fat",     { value: meal.lipides })}</span>
+                                        {/* Nom du plat + bouton recette aligné à droite */}
+                                        <div className={s.mealNameRow}>
+                                            <span className={s.mealNameText}>{meal.plat}</span>
+                                            <RecipePanel.Button />
                                         </div>
-                                    )}
 
+                                        {/* Macros */}
+                                        {meal.kcal > 0 && (
+                                            <div className={s.macros}>
+                                                <span className={`${s.pill} ${s.pillKcal}`}>{t("meal.kcal",    { value: meal.kcal })}</span>
+                                                <span className={`${s.pill} ${s.pillP}`}   >{t("meal.protein", { value: meal.proteines })}</span>
+                                                <span className={`${s.pill} ${s.pillG}`}   >{t("meal.carbs",   { value: meal.glucides })}</span>
+                                                <span className={`${s.pill} ${s.pillL}`}   >{t("meal.fat",     { value: meal.lipides })}</span>
+                                            </div>
+                                        )}
+
+                                        {/* Panel recette — s'ouvre en dessous sur toute la largeur */}
+                                        <RecipePanel.Panel />
+
+                                    </RecipePanel>
                                 </div>
                             </div>
                         </div>
