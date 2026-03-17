@@ -1,20 +1,20 @@
-import type { Diet, SpoonacularRecipe } from "@/types";
+import type {Diet, SpoonacularRecipe} from "@/types";
 
 const API_KEY = import.meta.env.VITE_SPOONACULAR_API_KEY as string;
 const BASE_URL = "https://api.spoonacular.com";
 
 const DIET_MAP: Record<Diet, string> = {
-    omnivore:      "",
-    vegetarien:    "vegetarian",
-    vegan:         "vegan",
+    omnivore: "",
+    vegetarien: "vegetarian",
+    vegan: "vegan",
     "sans-gluten": "gluten free",
 };
 
 // ── Recherche de recettes par ingrédients ─────────────────────
 export interface SearchRecipesParams {
     ingredients: string[];
-    diet:        Diet;
-    number?:     number;
+    diet: Diet;
+    number?: number;
 }
 
 export async function searchRecipesByIngredients({
@@ -23,14 +23,14 @@ export async function searchRecipesByIngredients({
                                                      number = 14,
                                                  }: SearchRecipesParams): Promise<SpoonacularRecipe[]> {
     const params = new URLSearchParams({
-        apiKey:               API_KEY,
-        includeIngredients:   ingredients.join(","),
-        number:               String(number),
-        sort:                 "max-used-ingredients",
-        sortDirection:        "desc",
+        apiKey: API_KEY,
+        includeIngredients: ingredients.join(","),
+        number: String(number),
+        sort: "max-used-ingredients",
+        sortDirection: "desc",
         addRecipeInformation: "true",
-        addRecipeNutrition:   "true",
-        fillIngredients:      "true",
+        addRecipeNutrition: "true",
+        fillIngredients: "true",
     });
 
     const dietValue = DIET_MAP[diet];
@@ -46,7 +46,7 @@ export async function searchRecipesByIngredients({
 // ── Détail complet d'une recette ──────────────────────────────
 export async function fetchRecipeDetail(id: number): Promise<SpoonacularRecipe> {
     const params = new URLSearchParams({
-        apiKey:           API_KEY,
+        apiKey: API_KEY,
         includeNutrition: "true",
     });
 

@@ -1,6 +1,6 @@
-import { QueryClient } from "@tanstack/react-query";
-import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
-import { persistQueryClient } from "@tanstack/react-query-persist-client";
+import {QueryClient} from "@tanstack/react-query";
+import {createSyncStoragePersister} from "@tanstack/query-sync-storage-persister";
+import {persistQueryClient} from "@tanstack/react-query-persist-client";
 
 // ── QueryClient ───────────────────────────────────────────────
 export const queryClient = new QueryClient({
@@ -17,9 +17,9 @@ export const queryClient = new QueryClient({
             retry: 1,
 
             // Pas de refetch au focus ou à la reconnexion — inutile ici
-            refetchOnWindowFocus:    false,
-            refetchOnReconnect:      false,
-            refetchOnMount:          false,
+            refetchOnWindowFocus: false,
+            refetchOnReconnect: false,
+            refetchOnMount: false,
         },
     },
 });
@@ -27,7 +27,7 @@ export const queryClient = new QueryClient({
 // ── Persistance localStorage ──────────────────────────────────
 const persister = createSyncStoragePersister({
     storage: window.localStorage,
-    key:     "ssv_query_cache",
+    key: "ssv_query_cache",
     // Sérialisation / désérialisation par défaut (JSON)
 });
 

@@ -1,18 +1,18 @@
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { PlannerTab }   from "@/components/PlannerTab";
-import { FavsTab }      from "@/components/FavsTab";
-import { LangSwitcher } from "@/components/LangSwitcher";
-import { useFavs }      from "@/hooks/useFavs";
-import type { FavItem } from "@/types";
+import {useState} from "react";
+import {useTranslation} from "react-i18next";
+import {PlannerTab} from "@/components/PlannerTab";
+import {FavsTab} from "@/components/FavsTab";
+import {LangSwitcher} from "@/components/LangSwitcher";
+import {useFavs} from "@/hooks/useFavs";
+import type {FavItem} from "@/types";
 import s from "@/styles/App.module.css";
 
 type Tab = "planner" | "favs";
 
 export default function App() {
     const [tab, setTab] = useState<Tab>("planner");
-    const { favs, addFav, removeFav, isFav } = useFavs();
-    const { t } = useTranslation();
+    const {favs, addFav, removeFav, isFav} = useFavs();
+    const {t} = useTranslation();
 
     const handleFavToggle = (fav: FavItem) => {
         if (isFav(fav.id)) {
@@ -28,7 +28,7 @@ export default function App() {
 
                 {/* Nav bar : spacer | tabs | lang */}
                 <div className={s.navBar}>
-                    <div className={s.navSpacer} />
+                    <div className={s.navSpacer}/>
 
                     <div className={s.tabsBar}>
                         {(["planner", "favs"] as Tab[]).map((id) => (
@@ -46,14 +46,14 @@ export default function App() {
                     </div>
 
                     <div className={s.langWrap}>
-                        <LangSwitcher />
+                        <LangSwitcher/>
                     </div>
                 </div>
 
                 {/* Contenu */}
                 {tab === "planner"
-                    ? <PlannerTab onFavToggle={handleFavToggle} isFav={isFav} />
-                    : <FavsTab    favs={favs} onDelete={removeFav} />
+                    ? <PlannerTab onFavToggle={handleFavToggle} isFav={isFav}/>
+                    : <FavsTab favs={favs} onDelete={removeFav}/>
                 }
 
             </div>

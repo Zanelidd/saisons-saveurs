@@ -1,45 +1,45 @@
 /* ── Toggle button ── */
 .toggleBtn {
-    flex-shrink:   0;
-    margin-left:   6px;
-    padding:       4px 10px;
+    flex-shrink: 0;
+    margin-left: 6px;
+    padding: 4px 10px;
     border-radius: var(--radius-full);
-    border:        1.5px solid var(--accent);
-    background:    transparent;
-    color:         var(--accent);
-    font-family:   inherit;
-    font-size:     .74rem;
-    font-weight:   600;
-    cursor:        pointer;
-    white-space:   nowrap;
-    transition:    all .2s;
+    border: 1.5px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    font-family: inherit;
+    font-size: .74rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .2s;
 }
 
 .toggleBtn:hover:not(:disabled) {
     background: var(--accent);
-    color:      #fff;
+    color: #fff;
 }
 
 .toggleBtn:disabled {
     opacity: .6;
-    cursor:  not-allowed;
+    cursor: not-allowed;
 }
 
 /* ── Panel ── */
 .panel {
-    overflow:   hidden;
+    overflow: hidden;
     transition: max-height .4s ease;
     background: #f9f5ef;
     border-radius: var(--radius-md);
 }
 
 .panel.open {
-    border:     1px solid #e8e2d8;
+    border: 1px solid #e8e2d8;
     margin-top: 8px;
 }
 
 .panelInner {
-    padding:    16px 18px 14px;
+    padding: 16px 18px 14px;
     max-height: 420px;
     overflow-y: auto;
 }
@@ -47,119 +47,119 @@
 /* ── Loading ── */
 .loadingWrap {
     text-align: center;
-    padding:    20px;
-    color:      var(--color-muted);
-    font-size:  .84rem;
+    padding: 20px;
+    color: var(--color-muted);
+    font-size: .84rem;
 }
 
 .spinner {
-    width:         18px;
-    height:        18px;
-    border:        2px solid var(--color-border);
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--color-border);
     border-top-color: var(--accent);
     border-radius: 50%;
-    animation:     spin .8s linear infinite;
-    margin:        0 auto 8px;
+    animation: spin .8s linear infinite;
+    margin: 0 auto 8px;
 }
 
 /* ── Error ── */
 .errorText {
-    color:     var(--color-error-text);
+    color: var(--color-error-text);
     font-size: .83rem;
 }
 
 /* ── Recipe content ── */
 .recipeTitle {
     font-family: var(--font-serif), serif;
-    font-size:     1.05rem;
-    font-weight:   700;
+    font-size: 1.05rem;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
 .metaRow {
-    display:       flex;
-    gap:           7px;
+    display: flex;
+    gap: 7px;
     margin-bottom: 12px;
-    flex-wrap:     wrap;
+    flex-wrap: wrap;
 }
 
 .metaBadge {
-    font-size:     .73rem;
-    font-weight:   600;
-    color:         var(--color-subtle);
-    background:    #fff;
-    padding:       3px 9px;
+    font-size: .73rem;
+    font-weight: 600;
+    color: var(--color-subtle);
+    background: #fff;
+    padding: 3px 9px;
     border-radius: var(--radius-full);
-    border:        1px solid var(--color-border);
+    border: 1px solid var(--color-border);
 }
 
 .sourceLink {
-    font-size:    .75rem;
-    color:        var(--accent);
-    display:      inline-block;
+    font-size: .75rem;
+    color: var(--accent);
+    display: inline-block;
     margin-bottom: 10px;
 }
 
 /* ── Section label ── */
 .sectionLabel {
-    font-size:      .65rem;
-    font-weight:    800;
+    font-size: .65rem;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1.1px;
-    color:          var(--accent);
-    margin:         12px 0 7px;
-    display:        block;
+    color: var(--accent);
+    margin: 12px 0 7px;
+    display: block;
 }
 
 /* ── Ingredients ── */
 .ingredientsList {
-    list-style:      none;
-    display:         flex;
-    flex-direction:  column;
-    gap:             4px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .ingredientItem {
-    font-size:    .83rem;
+    font-size: .83rem;
     padding-left: 13px;
-    position:     relative;
-    line-height:  1.5;
+    position: relative;
+    line-height: 1.5;
 }
 
 .ingredientBullet {
-    position:    absolute;
-    left:        0;
-    color:       var(--accent);
+    position: absolute;
+    left: 0;
+    color: var(--accent);
     font-weight: 700;
 }
 
 /* ── Steps ── */
 .stepsList {
-    list-style:     none;
-    display:        flex;
+    list-style: none;
+    display: flex;
     flex-direction: column;
-    gap:            9px;
+    gap: 9px;
 }
 
 .stepItem {
-    font-size:    .83rem;
+    font-size: .83rem;
     padding-left: 30px;
-    position:     relative;
-    line-height:  1.6;
+    position: relative;
+    line-height: 1.6;
 }
 
 .stepNumber {
-    position:        absolute;
-    left:            0;
-    top:             1px;
-    width:           20px;
-    height:          20px;
-    border-radius:   50%;
-    background:      var(--accent);
-    color:           #fff;
-    font-size:       .68rem;
-    font-weight:     800;
-    display:         flex;
-    align-items:     center;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: .68rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }

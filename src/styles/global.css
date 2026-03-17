@@ -10,60 +10,68 @@
 
 /* ── Animations ── */
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ── Design tokens ── */
 :root {
-    --color-bg:          #f4f0e8;
-    --color-card:        #ffffff;
-    --color-border:      #e0d8cc;
+    --color-bg: #f4f0e8;
+    --color-card: #ffffff;
+    --color-border: #e0d8cc;
     --color-border-meal: #f0ebe3;
-    --color-text:        #1a1a1a;
-    --color-muted:       #aaa;
-    --color-subtle:      #999;
-    --color-error-bg:    #fff3f3;
-    --color-error-bdr:   #ffcdd2;
-    --color-error-text:  #c62828;
+    --color-text: #1a1a1a;
+    --color-muted: #aaa;
+    --color-subtle: #999;
+    --color-error-bg: #fff3f3;
+    --color-error-bdr: #ffcdd2;
+    --color-error-text: #c62828;
 
     /* Nutrition colors */
     --color-protein: #e74c3c;
-    --color-carbs:   #3498db;
-    --color-fat:     #9b59b6;
+    --color-carbs: #3498db;
+    --color-fat: #9b59b6;
 
     /* Macro pill colors */
-    --color-pill-kcal-bg:  #fff3e0;
+    --color-pill-kcal-bg: #fff3e0;
     --color-pill-kcal-txt: #e65100;
-    --color-pill-p-bg:     #fce4ec;
-    --color-pill-p-txt:    #c62828;
-    --color-pill-g-bg:     #e3f2fd;
-    --color-pill-g-txt:    #0277bd;
-    --color-pill-l-bg:     #f3e5f5;
-    --color-pill-l-txt:    #7b1fa2;
+    --color-pill-p-bg: #fce4ec;
+    --color-pill-p-txt: #c62828;
+    --color-pill-g-bg: #e3f2fd;
+    --color-pill-g-txt: #0277bd;
+    --color-pill-l-bg: #f3e5f5;
+    --color-pill-l-txt: #7b1fa2;
 
     /* Season accents (overridden dynamically via inline style) */
     --accent: #5a9e5a;
 
     /* Typography */
     --font-serif: 'DM Serif Display', Georgia, serif;
-    --font-sans:  'DM Sans', 'Segoe UI', sans-serif;
+    --font-sans: 'DM Sans', 'Segoe UI', sans-serif;
 
     /* Radius */
-    --radius-sm:  8px;
-    --radius-md:  10px;
-    --radius-lg:  14px;
-    --radius-xl:  20px;
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 20px;
     --radius-full: 9999px;
 }
 
 body {
     font-family: var(--font-sans), sans-serif;
-    background:  var(--color-bg);
-    color:       var(--color-text);
-    min-height:  100vh;
+    background: var(--color-bg);
+    color: var(--color-text);
+    min-height: 100vh;
 }

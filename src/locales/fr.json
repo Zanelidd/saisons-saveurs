@@ -1,81 +1,81 @@
 {
   "nav": {
     "planner": "Mon menu",
-    "favs":    "Favoris"
+    "favs": "Favoris"
   },
   "header": {
-    "title":    "Saisons & Saveurs",
+    "title": "Saisons & Saveurs",
     "subtitle": "Des menus équilibrés selon les légumes du moment"
   },
   "planner": {
-    "month":          "Mois",
-    "vegetables":     "Légumes de saison",
+    "month": "Mois",
+    "vegetables": "Légumes de saison",
     "veggieSubtitle": "{{month}} · {{season}} · {{count}} légumes",
-    "hint_zero":      "⚠️ Sélectionnez au moins un légume",
-    "hint_one":       "{{count}} légume sélectionné",
-    "hint_other":     "{{count}} légumes sélectionnés",
-    "diet":           "Régime",
-    "persons":        "Personnes",
-    "days":           "Durée",
-    "generate":       "✨ Générer mon menu équilibré",
-    "generating":     "⏳ Recherche de recettes…",
-    "refresh":        "🔄 Générer un menu différent",
-    "searching":      "Recherche des meilleures recettes de saison…",
-    "error":          "Erreur lors de la génération. Vérifiez votre clé API ou réessayez."
+    "hint_zero": "⚠️ Sélectionnez au moins un légume",
+    "hint_one": "{{count}} légume sélectionné",
+    "hint_other": "{{count}} légumes sélectionnés",
+    "diet": "Régime",
+    "persons": "Personnes",
+    "days": "Durée",
+    "generate": "✨ Générer mon menu équilibré",
+    "generating": "⏳ Recherche de recettes…",
+    "refresh": "🔄 Générer un menu différent",
+    "searching": "Recherche des meilleures recettes de saison…",
+    "error": "Erreur lors de la génération. Vérifiez votre clé API ou réessayez."
   },
   "diet": {
-    "omnivore":    "🍖 Omnivore",
-    "vegetarien":  "🥦 Végétarien",
-    "vegan":       "🌱 Vegan",
+    "omnivore": "🍖 Omnivore",
+    "vegetarien": "🥦 Végétarien",
+    "vegan": "🌱 Vegan",
     "sans-gluten": "🌾 Sans gluten"
   },
   "persons": {
-    "one":  "👤 1 personne",
-    "two":  "👥 2 personnes",
+    "one": "👤 1 personne",
+    "two": "👥 2 personnes",
     "four": "👨‍👩‍👧‍👦 4 personnes"
   },
   "daysOption": {
     "three": "3 jours",
-    "five":  "5 jours",
+    "five": "5 jours",
     "seven": "7 jours"
   },
   "meal": {
-    "lunch":   "Déjeuner",
-    "dinner":  "Dîner",
-    "kcal":    "🔥 {{value}} kcal",
+    "lunch": "Déjeuner",
+    "dinner": "Dîner",
+    "kcal": "🔥 {{value}} kcal",
     "protein": "🥩 P: {{value}}g",
-    "carbs":   "🌾 G: {{value}}g",
-    "fat":     "🫒 L: {{value}}g"
+    "carbs": "🌾 G: {{value}}g",
+    "fat": "🫒 L: {{value}}g"
   },
   "nutrition": {
-    "kcalDay":  "🔥 {{value}} kcal",
+    "kcalDay": "🔥 {{value}} kcal",
     "proteins": "Protéines {{value}}g",
-    "carbs":    "Glucides {{value}}g",
-    "fat":      "Lipides {{value}}g"
+    "carbs": "Glucides {{value}}g",
+    "fat": "Lipides {{value}}g"
   },
   "recipe": {
-    "open":        "📖 Recette",
-    "close":       "✕ Fermer",
-    "loading":     "Chargement de la recette…",
-    "error":       "⚠️ Impossible de charger la recette.",
-    "source":      "Voir la recette originale ↗",
-    "prep":        "⏱ Prép. {{value}}",
-    "cook":        "🔥 {{value}}",
+    "open": "📖 Recette",
+    "close": "✕ Fermer",
+    "loading": "Chargement de la recette…",
+    "error": "⚠️ Impossible de charger la recette.",
+    "source": "Voir la recette originale ↗",
+    "prep": "⏱ Prép. {{value}}",
+    "cook": "🔥 {{value}}",
     "ingredients": "Ingrédients",
-    "steps":       "Préparation"
+    "steps": "Préparation"
   },
   "difficulty": {
-    "easy":   "⭐ Facile",
+    "easy": "⭐ Facile",
     "medium": "⭐⭐ Moyen",
-    "hard":   "⭐⭐⭐ Élaboré"
+    "hard": "⭐⭐⭐ Élaboré"
   },
   "favs": {
-    "save":        "Sauvegarder",
-    "remove":      "Retirer des favoris",
-    "title":       "Mes menus sauvegardés",
-    "empty":       "Aucun menu sauvegardé.\nCliquez sur 🤍 pour sauvegarder un jour.",
-    "meta":        "{{persons}} pers. · {{diet}} · {{date}}",
-    "delete":      "🗑 Supprimer"
+    "save": "Sauvegarder",
+    "remove": "Retirer des favoris",
+    "title": "Mes menus sauvegardés",
+    "empty": "Aucun menu sauvegardé.\nCliquez sur 🤍 pour sauvegarder un jour.",
+    "meta": "{{persons}} pers. · {{diet}} · {{date}}",
+    "delete": "🗑 Supprimer"
   },
   "season": {
     "spring": "Printemps 🌸",
@@ -84,7 +84,33 @@
     "winter": "Hiver ❄️"
   },
   "months": {
-    "short": ["Jan", "Fév", "Mar", "Avr", "Mai", "Jun", "Jul", "Aoû", "Sep", "Oct", "Nov", "Déc"],
-    "full":  ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+    "short": [
+      "Jan",
+      "Fév",
+      "Mar",
+      "Avr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Aoû",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Déc"
+    ],
+    "full": [
+      "Janvier",
+      "Février",
+      "Mars",
+      "Avril",
+      "Mai",
+      "Juin",
+      "Juillet",
+      "Août",
+      "Septembre",
+      "Octobre",
+      "Novembre",
+      "Décembre"
+    ]
   }
 }

@@ -1,20 +1,20 @@
-import { useTranslation } from "react-i18next";
-import type { FavItem } from "@/types";
+import {useTranslation} from "react-i18next";
+import type {FavItem} from "@/types";
 import s from "@/styles/FavsTab.module.css";
 
 interface FavsTabProps {
-    favs:     FavItem[];
+    favs: FavItem[];
     onDelete: (id: string) => void;
 }
 
-export function FavsTab({ favs, onDelete }: FavsTabProps) {
-    const { t } = useTranslation();
+export function FavsTab({favs, onDelete}: FavsTabProps) {
+    const {t} = useTranslation();
 
     if (favs.length === 0) {
         return (
             <div className={s.empty}>
                 <span className={s.emptyIcon}>🌿</span>
-                <p style={{ whiteSpace: "pre-line" }}>{t("favs.empty")}</p>
+                <p style={{whiteSpace: "pre-line"}}>{t("favs.empty")}</p>
             </div>
         );
     }
@@ -23,7 +23,7 @@ export function FavsTab({ favs, onDelete }: FavsTabProps) {
         <div className={s.wrap}>
             <div className={s.sectionTitle}>
                 {t("favs.title")}
-                <span className={s.sectionTitleLine} />
+                <span className={s.sectionTitleLine}/>
             </div>
             {favs.map(fav => {
                 const plats = Object.values(fav.repas).map(meal => meal.plat);
@@ -33,7 +33,7 @@ export function FavsTab({ favs, onDelete }: FavsTabProps) {
                             <div>
                                 <div className={s.itemTitle}>❤️ {fav.jour} — {fav.monthName}</div>
                                 <div className={s.itemMeta}>
-                                    {t("favs.meta", { persons: fav.persons, diet: fav.diet, date: fav.savedAt })}
+                                    {t("favs.meta", {persons: fav.persons, diet: fav.diet, date: fav.savedAt})}
                                 </div>
                             </div>
                             <button className={s.deleteBtn} onClick={() => onDelete(fav.id)}>

@@ -4,30 +4,36 @@
 
 .wrap {
     max-width: 1440px;
-    margin:    0 auto;
-    padding:   0 64px 80px;
+    margin: 0 auto;
+    padding: 0 64px 80px;
 }
 
 @media (max-width: 1280px) {
-    .wrap { padding: 0 48px 80px; }
+    .wrap {
+        padding: 0 48px 80px;
+    }
 }
 
 @media (max-width: 1024px) {
-    .wrap { padding: 0 32px 80px; }
+    .wrap {
+        padding: 0 32px 80px;
+    }
 }
 
 @media (max-width: 600px) {
-    .wrap { padding: 0 16px 80px; }
+    .wrap {
+        padding: 0 16px 80px;
+    }
 }
 
 /* ── Nav bar : tabs centré + lang à droite ── */
 .navBar {
-    display:     flex;
+    display: flex;
     align-items: center;
-    padding:     20px 0 10px;
-    margin-top:  24px;
-    position:    relative;
-    z-index:     20;
+    padding: 20px 0 10px;
+    margin-top: 24px;
+    position: relative;
+    z-index: 20;
 }
 
 /* Spacer gauche pour équilibrer le lang switcher à droite */
@@ -40,40 +46,45 @@
 }
 
 .tab {
-    padding:     11px 32px;
-    border:      none;
-    cursor:      pointer;
+    padding: 11px 32px;
+    border: none;
+    cursor: pointer;
     font-family: var(--font-sans), sans-serif;
     font-weight: 600;
-    font-size:   .88rem;
-    transition:  all .2s;
-    background:  #fff;
-    color:       #888;
-    box-shadow:  0 4px 20px rgba(0, 0, 0, .1);
+    font-size: .88rem;
+    transition: all .2s;
+    background: #fff;
+    color: #888;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
 }
 
-.tab:first-child { border-radius: var(--radius-full) 0 0 var(--radius-full); }
-.tab:last-child  { border-radius: 0 var(--radius-full) var(--radius-full) 0; }
+.tab:first-child {
+    border-radius: var(--radius-full) 0 0 var(--radius-full);
+}
+
+.tab:last-child {
+    border-radius: 0 var(--radius-full) var(--radius-full) 0;
+}
 
 .tab.active {
     background: var(--accent);
-    color:      #fff;
+    color: #fff;
 }
 
 .tabBadge {
-    display:         inline-flex;
-    align-items:     center;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    background:      rgba(255, 255, 255, .28);
-    border-radius:   var(--radius-md);
-    padding:         1px 7px;
-    font-size:       .7rem;
-    margin-left:     5px;
+    background: rgba(255, 255, 255, .28);
+    border-radius: var(--radius-md);
+    padding: 1px 7px;
+    font-size: .7rem;
+    margin-left: 5px;
 }
 
 /* ── Lang switcher aligned right ── */
 .langWrap {
-    flex:            1;
-    display:         flex;
+    flex: 1;
+    display: flex;
     justify-content: flex-end;
 }

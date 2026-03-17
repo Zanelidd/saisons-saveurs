@@ -3,41 +3,41 @@
 // passer toujours par les types métier (menu.types, recipe.types)
 
 export interface SpoonacularNutrient {
-  name:   string;
-  amount: number;
-  unit:   string;
+    name: string;
+    amount: number;
+    unit: string;
 }
 
 export interface SpoonacularIngredient {
-  name:     string;
-  measures?: {
-    metric?: {
-      amount:    number;
-      unitShort: string;
+    name: string;
+    measures?: {
+        metric?: {
+            amount: number;
+            unitShort: string;
+        };
     };
-  };
 }
 
 export interface SpoonacularStep {
-  number: number;
-  step:   string;
+    number: number;
+    step: string;
 }
 
 export interface SpoonacularInstruction {
-  steps: SpoonacularStep[];
+    steps: SpoonacularStep[];
 }
 
 export interface SpoonacularRecipe {
-  id:                    number;
-  title:                 string;
-  image:                 string;
-  readyInMinutes:        number;
-  preparationMinutes:    number;
-  cookingMinutes:        number;
-  sourceUrl?:            string;
-  nutrition?: {
-    nutrients: SpoonacularNutrient[];
-  };
-  extendedIngredients?:   SpoonacularIngredient[];
-  analyzedInstructions?:  SpoonacularInstruction[];
+    id: number;
+    title: string;
+    image: string;
+    readyInMinutes: number;
+    preparationMinutes: number;
+    cookingMinutes: number;
+    sourceUrl?: string;
+    nutrition?: {
+        nutrients: SpoonacularNutrient[];
+    };
+    extendedIngredients?: SpoonacularIngredient[];
+    analyzedInstructions?: SpoonacularInstruction[];
 }
