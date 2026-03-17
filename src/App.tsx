@@ -10,7 +10,7 @@ import s from "@/styles/App.module.css";
 type Tab = "planner" | "favs";
 
 export default function App() {
-    const [tab, setTab]              = useState<Tab>("planner");
+    const [tab, setTab] = useState<Tab>("planner");
     const { favs, addFav, removeFav, isFav } = useFavs();
     const { t } = useTranslation();
 
@@ -26,8 +26,10 @@ export default function App() {
         <div className={s.app}>
             <div className={s.wrap}>
 
-                {/* Tabs + LangSwitcher */}
-                <div className={s.topBar}>
+                {/* Nav bar : spacer | tabs | lang */}
+                <div className={s.navBar}>
+                    <div className={s.navSpacer} />
+
                     <div className={s.tabsBar}>
                         {(["planner", "favs"] as Tab[]).map((id) => (
                             <button
@@ -42,13 +44,18 @@ export default function App() {
                             </button>
                         ))}
                     </div>
-                    <LangSwitcher />
+
+                    <div className={s.langWrap}>
+                        <LangSwitcher />
+                    </div>
                 </div>
 
+                {/* Contenu */}
                 {tab === "planner"
                     ? <PlannerTab onFavToggle={handleFavToggle} isFav={isFav} />
                     : <FavsTab    favs={favs} onDelete={removeFav} />
                 }
+
             </div>
         </div>
     );

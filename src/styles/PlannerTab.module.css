@@ -1,10 +1,10 @@
 /* ── Header ── */
 .header {
-    padding:         48px 32px 70px;
+    padding:         52px 32px 52px;
     text-align:      center;
     position:        relative;
     overflow:        hidden;
-    margin:          0 -16px;
+    margin:          0 -64px;
     /* background set dynamically via inline style (season gradient) */
 }
 
@@ -267,4 +267,15 @@
     .prefsRow  { flex-direction: column; }
     .select    { width: 100%; }
     .veggieGrid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+}
+
+/* ── Header responsive margin (compense le padding du .wrap) ── */
+@media (max-width: 1280px) {
+    .header { margin: 0 -48px; }
+}
+@media (max-width: 1024px) {
+    .header { margin: 0 -32px; }
+}
+@media (max-width: 600px) {
+    .header { margin: 0 -16px; padding: 40px 20px 44px; }
 }

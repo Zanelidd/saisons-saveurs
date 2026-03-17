@@ -57,6 +57,7 @@ export function DayCard({
 
     return (
         <div className={s.card}>
+
             {/* Header */}
             <div className={s.header} onClick={() => setOpen(o => !o)}>
                 <div className={s.headerLeft}>
@@ -103,15 +104,28 @@ export function DayCard({
                     </div>
                 )}
 
-                {/* Meals */}
+                {/* Repas */}
                 {repasEntries.map(([type, meal]) => {
-                    const labelKey = type === "déjeuner" || type === "dejeuner" ? "meal.lunch" : "meal.dinner";
+                    const labelKey = type === "déjeuner" || type === "dejeuner"
+                        ? "meal.lunch" : "meal.dinner";
                     return (
                         <div key={type} className={s.meal}>
                             <div className={s.mealTop}>
                                 <div className={s.mealLabel}>{t(labelKey)}</div>
                                 <div className={s.mealBody}>
-                                    <div className={s.mealName}>{meal.plat}</div>
+
+                                    {/* Nom + bouton recette à droite */}
+                                    <div className={s.mealNameRow}>
+                                        <span className={s.mealNameText}>{meal.plat}</span>
+                                        <RecipePanel
+                                            recipeId={meal.id}
+                                            diet={diet}
+                                            persons={persons}
+                                            accent={accent}
+                                        />
+                                    </div>
+
+                                    {/* Macros */}
                                     {meal.kcal > 0 && (
                                         <div className={s.macros}>
                                             <span className={`${s.pill} ${s.pillKcal}`}>{t("meal.kcal",    { value: meal.kcal })}</span>
@@ -120,7 +134,7 @@ export function DayCard({
                                             <span className={`${s.pill} ${s.pillL}`}   >{t("meal.fat",     { value: meal.lipides })}</span>
                                         </div>
                                     )}
-                                    <RecipePanel recipeId={meal.id} diet={diet} persons={persons} accent={accent} />
+
                                 </div>
                             </div>
                         </div>

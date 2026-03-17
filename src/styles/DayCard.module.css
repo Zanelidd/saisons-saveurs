@@ -180,3 +180,17 @@
 .pillP    { background: var(--color-pill-p-bg);    color: var(--color-pill-p-txt); }
 .pillG    { background: var(--color-pill-g-bg);    color: var(--color-pill-g-txt); }
 .pillL    { background: var(--color-pill-l-bg);    color: var(--color-pill-l-txt); }
+
+/* ── Meal name row (name + recipe btn right-aligned) ── */
+.mealNameRow {
+    display:     flex;
+    align-items: flex-start;
+    gap:         8px;
+}
+
+.mealNameText {
+    flex:        1;
+    font-size:   .88rem;
+    line-height: 1.5;
+    min-width:   0;
+}

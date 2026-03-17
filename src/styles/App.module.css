@@ -3,9 +3,13 @@
 }
 
 .wrap {
-    max-width:  1200px;
-    margin:     0 auto;
-    padding:    0 48px 80px;
+    max-width: 1440px;
+    margin:    0 auto;
+    padding:   0 64px 80px;
+}
+
+@media (max-width: 1280px) {
+    .wrap { padding: 0 48px 80px; }
 }
 
 @media (max-width: 1024px) {
@@ -16,16 +20,27 @@
     .wrap { padding: 0 16px 80px; }
 }
 
-/* ── Tabs ── */
+/* ── Nav bar : tabs centré + lang à droite ── */
+.navBar {
+    display:     flex;
+    align-items: center;
+    padding:     20px 0 0;
+    margin-top:  24px;
+    position:    relative;
+    z-index:     20;
+}
+
+/* Spacer gauche pour équilibrer le lang switcher à droite */
+.navSpacer {
+    flex: 1;
+}
+
 .tabsBar {
-    display:         flex;
-    justify-content: center;
-    position:        relative;
-    z-index:         20;
+    display: flex;
 }
 
 .tab {
-    padding:     11px 28px;
+    padding:     11px 32px;
     border:      none;
     cursor:      pointer;
     font-family: var(--font-sans), sans-serif;
@@ -54,4 +69,11 @@
     padding:         1px 7px;
     font-size:       .7rem;
     margin-left:     5px;
+}
+
+/* ── Lang switcher aligned right ── */
+.langWrap {
+    flex:            1;
+    display:         flex;
+    justify-content: flex-end;
 }
