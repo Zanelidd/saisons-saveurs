@@ -29,6 +29,7 @@ export async function searchRecipesByIngredients({
         sort:                 "max-used-ingredients",
         sortDirection:        "desc",
         addRecipeInformation: "true",
+        addRecipeNutrition:   "true",
         fillIngredients:      "true",
     });
 
