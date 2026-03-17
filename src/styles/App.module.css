@@ -1,0 +1,49 @@
+.app {
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width:  860px;
+  margin:     0 auto;
+  padding:    0 16px 80px;
+}
+
+/* ── Tabs ── */
+.tabsBar {
+  display:         flex;
+  justify-content: center;
+  position:        relative;
+  z-index:         20;
+}
+
+.tab {
+  padding:     11px 28px;
+  border:      none;
+  cursor:      pointer;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size:   .88rem;
+  transition:  all .2s;
+  background:  #fff;
+  color:       #888;
+  box-shadow:  0 4px 20px rgba(0, 0, 0, .1);
+}
+
+.tab:first-child { border-radius: var(--radius-full) 0 0 var(--radius-full); }
+.tab:last-child  { border-radius: 0 var(--radius-full) var(--radius-full) 0; }
+
+.tab.active {
+  background: var(--accent);
+  color:      #fff;
+}
+
+.tabBadge {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  background:      rgba(255, 255, 255, .28);
+  border-radius:   var(--radius-md);
+  padding:         1px 7px;
+  font-size:       .7rem;
+  margin-left:     5px;
+}

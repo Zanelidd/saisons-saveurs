@@ -1,0 +1,48 @@
+import type { Veggie } from "@/types";
+
+export const VEGGIES: Veggie[] = [
+    { emoji: "🍅", name: "Tomate",              months: [6, 7, 8, 9] },
+    { emoji: "🥒", name: "Concombre",           months: [6, 7, 8, 9] },
+    { emoji: "🫑", name: "Poivron",             months: [7, 8, 9, 10] },
+    { emoji: "🍆", name: "Aubergine",           months: [7, 8, 9, 10] },
+    { emoji: "🥬", name: "Courgette",           months: [6, 7, 8, 9] },
+    { emoji: "🌽", name: "Maïs",               months: [7, 8, 9] },
+    { emoji: "🫘", name: "Haricot vert",        months: [6, 7, 8, 9] },
+    { emoji: "🧅", name: "Oignon",              months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+    { emoji: "🧄", name: "Ail",                 months: [6, 7, 8, 9, 10, 11, 12] },
+    { emoji: "🥕", name: "Carotte",             months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+    { emoji: "🥦", name: "Brocoli",             months: [3, 4, 5, 6, 9, 10, 11] },
+    { emoji: "🥬", name: "Épinards",            months: [3, 4, 5, 9, 10, 11] },
+    { emoji: "🫛", name: "Petits pois",         months: [4, 5, 6, 7] },
+    { emoji: "🌿", name: "Asperges",            months: [3, 4, 5, 6] },
+    { emoji: "🫚", name: "Radis",               months: [3, 4, 5, 6, 9, 10] },
+    { emoji: "🫘", name: "Fèves",               months: [4, 5, 6, 7] },
+    { emoji: "🌿", name: "Artichaut",           months: [4, 5, 6, 7, 8, 9] },
+    { emoji: "🥗", name: "Laitue",              months: [4, 5, 6, 7, 8, 9] },
+    { emoji: "🎃", name: "Potiron",             months: [9, 10, 11, 12] },
+    { emoji: "🧅", name: "Poireau",             months: [9, 10, 11, 12, 1, 2, 3] },
+    { emoji: "🥦", name: "Chou-fleur",          months: [9, 10, 11, 12, 1, 2, 3] },
+    { emoji: "🫚", name: "Betterave",           months: [7, 8, 9, 10, 11, 12, 1] },
+    { emoji: "🌰", name: "Châtaigne",           months: [9, 10, 11] },
+    { emoji: "🍠", name: "Patate douce",        months: [9, 10, 11, 12, 1] },
+    { emoji: "🥬", name: "Chou vert",           months: [9, 10, 11, 12, 1, 2, 3] },
+    { emoji: "🧄", name: "Céleri-rave",         months: [9, 10, 11, 12, 1, 2] },
+    { emoji: "🍂", name: "Endive",              months: [10, 11, 12, 1, 2, 3] },
+    { emoji: "🥬", name: "Chou de Bruxelles",   months: [10, 11, 12, 1, 2] },
+    { emoji: "🥕", name: "Panais",              months: [10, 11, 12, 1, 2, 3] },
+    { emoji: "🍠", name: "Pomme de terre",      months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+    { emoji: "🌿", name: "Mâche",               months: [10, 11, 12, 1, 2, 3] },
+    { emoji: "🌾", name: "Navet",               months: [10, 11, 12, 1, 2, 3] },
+    { emoji: "🫒", name: "Chou rouge",          months: [9, 10, 11, 12, 1, 2] },
+    { emoji: "🌿", name: "Fenouil",             months: [6, 7, 8, 9, 10] },
+    { emoji: "🫛", name: "Topinambour",         months: [10, 11, 12, 1, 2, 3] },
+    { emoji: "🥬", name: "Roquette",            months: [4, 5, 6, 9, 10] },
+    { emoji: "🌰", name: "Courge butternut",    months: [9, 10, 11, 12] },
+    { emoji: "🧅", name: "Échalote",            months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+    { emoji: "🫘", name: "Lentilles",           months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+    { emoji: "🥬", name: "Blette",              months: [6, 7, 8, 9, 10] },
+];
+
+// Helpers
+export const getVeggiesForMonth = (month: number): Veggie[] =>
+    VEGGIES.filter(v => v.months.includes(month as Veggie["months"][number]));

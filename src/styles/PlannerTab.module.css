@@ -1,0 +1,270 @@
+/* ── Header ── */
+.header {
+    padding:         48px 32px 70px;
+    text-align:      center;
+    position:        relative;
+    overflow:        hidden;
+    margin:          0 -16px;
+    /* background set dynamically via inline style (season gradient) */
+}
+
+.headerLeaf {
+    position:       absolute;
+    opacity:        .06;
+    pointer-events: none;
+    user-select:    none;
+}
+
+.headerTitle {
+    font-family: var(--font-serif);
+    font-size:   clamp(2rem, 6vw, 3.2rem);
+    color:       #fff;
+    letter-spacing: -.5px;
+    position:    relative;
+}
+
+.headerTitleEm {
+    font-style: italic;
+    color:      rgba(200, 240, 180, .85);
+}
+
+.headerSub {
+    color:       rgba(255, 255, 255, .65);
+    margin-top:  10px;
+    font-size:   .95rem;
+    font-weight: 300;
+    position:    relative;
+}
+
+/* ── Section title ── */
+.sectionTitle {
+    font-family:  var(--font-serif);
+    font-size:    1.4rem;
+    font-weight:  700;
+    display:      flex;
+    align-items:  center;
+    gap:          12px;
+    margin-bottom: 14px;
+}
+
+.sectionTitleLine {
+    flex:       1;
+    height:     1px;
+    background: var(--color-border);
+}
+
+.sectionSub {
+    font-size:     .8rem;
+    color:         var(--color-subtle);
+    margin:        -6px 0 16px;
+}
+
+/* ── Month strip ── */
+.monthStrip {
+    display:         flex;
+    flex-wrap:       wrap;
+    gap:             6px;
+    justify-content: center;
+    margin-bottom:   28px;
+}
+
+.monthBtn {
+    padding:      5px 11px;
+    border-radius: var(--radius-sm);
+    border:       2px solid #ddd;
+    font-size:    .76rem;
+    font-weight:  700;
+    cursor:       pointer;
+    background:   #fff;
+    color:        var(--color-subtle);
+    font-family:  inherit;
+    transition:   all .2s;
+}
+
+.monthBtn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color:      #fff;
+}
+
+/* ── Veggie grid ── */
+.veggieGrid {
+    display:               grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap:                   10px;
+    margin-bottom:         10px;
+}
+
+.veggieCard {
+    padding:       10px 12px;
+    border-radius: var(--radius-lg);
+    border:        2px solid var(--color-border);
+    cursor:        pointer;
+    transition:    all .2s;
+    background:    #fff;
+    user-select:   none;
+}
+
+.veggieCard.selected {
+    /* border-color and background set inline (depend on accent) */
+}
+
+.veggieEmoji {
+    font-size:     1.45rem;
+    display:       block;
+    margin-bottom: 4px;
+}
+
+.veggieName {
+    font-size:   .8rem;
+    font-weight: 600;
+    display:     block;
+    color:       #333;
+}
+
+.veggieCard.selected .veggieName {
+    color: var(--accent);
+}
+
+.veggieDots {
+    margin-top: 5px;
+    display:    flex;
+    gap:        2px;
+    flex-wrap:  wrap;
+}
+
+.veggieDot {
+    width:         5px;
+    height:        5px;
+    border-radius: 50%;
+    background:    var(--color-border);
+    display:       inline-block;
+}
+
+.veggieDot.on  { background: var(--accent); }
+.veggieDot.now { box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 27%, transparent); }
+
+/* ── Hint ── */
+.hint {
+    font-size:   .78rem;
+    color:       var(--color-muted);
+    text-align:  center;
+    margin:      -4px 0 20px;
+}
+
+/* ── Prefs row ── */
+.prefsRow {
+    display:       flex;
+    gap:           10px;
+    flex-wrap:     wrap;
+    margin-bottom: 24px;
+}
+
+.select {
+    padding:          10px 34px 10px 15px;
+    border-radius:    var(--radius-md);
+    border:           2px solid var(--color-border);
+    font-family:      inherit;
+    font-size:        .87rem;
+    background:       #fff;
+    cursor:           pointer;
+    color:            #333;
+    appearance:       none;
+    flex:             1 1 140px;
+    transition:       border-color .2s;
+}
+
+.select:focus {
+    outline:      none;
+    border-color: var(--accent);
+}
+
+/* ── Generate button ── */
+.generateBtn {
+    display:       block;
+    width:         100%;
+    padding:       15px;
+    border-radius: var(--radius-lg);
+    border:        none;
+    font-family:   var(--font-serif);
+    font-style:    italic;
+    font-size:     1.15rem;
+    cursor:        pointer;
+    color:         #fff;
+    /* background set inline (uses accent) */
+    box-shadow:    0 4px 20px rgba(0, 0, 0, .18);
+    margin-bottom: 12px;
+    transition:    all .3s;
+}
+
+.generateBtn:hover:not(:disabled) {
+    transform:  translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .24);
+}
+
+.generateBtn:disabled {
+    opacity: .55;
+    cursor:  not-allowed;
+}
+
+/* ── Refresh button ── */
+.refreshBtn {
+    display:       block;
+    width:         100%;
+    padding:       11px;
+    border-radius: var(--radius-lg);
+    border:        1.5px solid var(--color-border);
+    background:    #fff;
+    font-family:   var(--font-sans);
+    font-size:     .88rem;
+    font-weight:   600;
+    cursor:        pointer;
+    color:         var(--color-subtle);
+    margin-bottom: 32px;
+    transition:    all .2s;
+}
+
+.refreshBtn:hover:not(:disabled) {
+    border-color: var(--accent);
+    color:        var(--accent);
+}
+
+.refreshBtn:disabled {
+    opacity: .45;
+    cursor:  not-allowed;
+}
+
+/* ── Error ── */
+.error {
+    background:    var(--color-error-bg);
+    border:        1px solid var(--color-error-bdr);
+    border-radius: var(--radius-lg);
+    padding:       13px 17px;
+    color:         var(--color-error-text);
+    font-size:     .86rem;
+    margin-bottom: 18px;
+}
+
+/* ── Loading ── */
+.loading {
+    text-align: center;
+    padding:    52px;
+    color:      var(--color-subtle);
+}
+
+.spinner {
+    width:         38px;
+    height:        38px;
+    border:        3px solid var(--color-border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation:     spin .8s linear infinite;
+    margin:        0 auto 14px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .prefsRow  { flex-direction: column; }
+    .select    { width: 100%; }
+    .veggieGrid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+}
