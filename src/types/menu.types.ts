@@ -1,17 +1,17 @@
-export interface Macros {
+export type Macros = {
     kcal: number;
     proteines: number;
     glucides: number;
     lipides: number;
 }
 
-export interface MealEntry extends Macros {
+export interface MealEntry extends Macros  {
     id: number;
     plat: string;
     image: string;
 }
 
-export interface DayMenu {
+export type DayMenu = {
     jour: string;
     repas: {
         dejeuner: MealEntry;

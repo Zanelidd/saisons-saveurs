@@ -1,8 +1,9 @@
 import {createContext, useContext, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {useRecipe} from "@/hooks/useRecipe";
-import type {Diet} from "@/types";
+
 import s from "@/styles/RecipePanel.module.css";
+import type {Diet} from "@/types/user.types.ts";
 
 interface RecipePanelProps {
     recipeId: number;

@@ -1,8 +1,10 @@
 import {useState} from "react";
 import {useTranslation} from "react-i18next";
 import {RecipePanel} from "./RecipePanel";
-import type {DayMenu, Diet, FavItem} from "@/types";
+import type {DayMenu} from "@/types/menu.types";
 import s from "@/styles/DayCard.module.css";
+import type {Diet} from "@/types/user.types.ts";
+import type {FavItem} from "@/types/fav.types.ts";
 
 interface DayCardProps {
     dayMenu: DayMenu;

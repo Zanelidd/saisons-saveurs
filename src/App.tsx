@@ -4,8 +4,9 @@ import {PlannerTab} from "@/components/PlannerTab";
 import {FavsTab} from "@/components/FavsTab";
 import {LangSwitcher} from "@/components/LangSwitcher";
 import {useFavs} from "@/hooks/useFavs";
-import type {FavItem} from "@/types";
+
 import s from "@/styles/App.module.css";
+import type {FavItem} from "@/types/fav.types.ts";
 
 type Tab = "planner" | "favs";
 

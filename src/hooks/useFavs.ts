@@ -1,5 +1,6 @@
 import {useCallback, useState} from "react";
-import type {FavItem} from "@/types";
+import type {FavItem} from "@/types/fav.types.ts";
+
 
 const STORAGE_KEY = "ssv_favs";
 

@@ -1,7 +1,8 @@
 import {useQuery} from "@tanstack/react-query";
 import {searchRecipesByIngredients} from "@/services/spoonacular.service";
 import {buildMenuFromRecipes} from "@/services/menu.service";
-import type {DayMenu, Diet} from "@/types";
+import type {Diet} from "@/types/user.types.ts";
+import type {DayMenu} from "@/types/menu.types.ts";
 
 interface UseMenuParams {
     ingredients: string[];

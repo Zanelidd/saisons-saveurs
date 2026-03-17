@@ -1,7 +1,7 @@
 import type {Diet} from "./user.types";
 import type {DayMenu} from "./menu.types";
 
-export interface FavItem {
+export type FavItem = {
     id: string;
     jour: string;
     month: number;

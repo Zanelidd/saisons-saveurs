@@ -2,13 +2,13 @@
 // Ne jamais utiliser ces types directement dans les composants UI —
 // passer toujours par les types métier (menu.types, recipe.types)
 
-export interface SpoonacularNutrient {
+export type SpoonacularNutrient = {
     name: string;
     amount: number;
     unit: string;
 }
 
-export interface SpoonacularIngredient {
+export type SpoonacularIngredient = {
     name: string;
     measures?: {
         metric?: {
@@ -18,16 +18,16 @@ export interface SpoonacularIngredient {
     };
 }
 
-export interface SpoonacularStep {
+export type SpoonacularStep = {
     number: number;
     step: string;
 }
 
-export interface SpoonacularInstruction {
+export type SpoonacularInstruction = {
     steps: SpoonacularStep[];
 }
 
-export interface SpoonacularRecipe {
+export type SpoonacularRecipe = {
     id: number;
     title: string;
     image: string;

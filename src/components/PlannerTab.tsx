@@ -4,8 +4,10 @@ import {useQueryClient} from "@tanstack/react-query";
 import {DayCard} from "./DayCard";
 import {buildMenuQueryKey, useMenu} from "@/hooks/useMenu";
 import {getVeggiesForMonth} from "@/data/veggies.data";
-import type {Diet, FavItem} from "@/types";
+
 import s from "@/styles/PlannerTab.module.css";
+import type {FavItem} from "@/types/fav.types.ts";
+import type {Diet} from "@/types/user.types.ts";
 
 const SEASON_ACCENT: Record<number, string> = {
     1: "#3a7aab", 2: "#3a7aab", 3: "#5a9e5a", 4: "#5a9e5a", 5: "#5a9e5a",

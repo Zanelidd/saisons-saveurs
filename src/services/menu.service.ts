@@ -1,4 +1,7 @@
-import type {DayMenu, Macros, MealEntry, RecipeDetail, SpoonacularNutrient, SpoonacularRecipe} from "@/types";
+import type {SpoonacularNutrient, SpoonacularRecipe} from "@/types/api.types.ts";
+import type {DayMenu, Macros, MealEntry} from "@/types/menu.types.ts";
+import type {RecipeDetail} from "@/types/recipe.types.ts";
+
 
 const DAY_NAMES = [
     "Lundi", "Mardi", "Mercredi", "Jeudi",

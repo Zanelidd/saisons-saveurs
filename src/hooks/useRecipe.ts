@@ -1,7 +1,8 @@
 import {useQuery} from "@tanstack/react-query";
 import {fetchRecipeDetail} from "@/services/spoonacular.service";
 import {parseRecipeDetail} from "@/services/menu.service";
-import type {RecipeDetail} from "@/types";
+import type {RecipeDetail} from "@/types/recipe.types.ts";
+
 
 // Chaque recette est identifiée par son id Spoonacular.
 // Une fois chargée, elle est mise en cache indéfiniment.

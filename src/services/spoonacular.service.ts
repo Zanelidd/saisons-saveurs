@@ -1,4 +1,6 @@
-import type {Diet, SpoonacularRecipe} from "@/types";
+import type {Diet} from "@/types/user.types.ts";
+import type {SpoonacularRecipe} from "@/types/api.types.ts";
+
 
 const API_KEY = import.meta.env.VITE_SPOONACULAR_API_KEY as string;
 const BASE_URL = "https://api.spoonacular.com";

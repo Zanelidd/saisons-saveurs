@@ -1,6 +1,6 @@
 import {useTranslation} from "react-i18next";
-import type {FavItem} from "@/types";
 import s from "@/styles/FavsTab.module.css";
+import type {FavItem} from "@/types/fav.types.ts";
 
 interface FavsTabProps {
     favs: FavItem[];

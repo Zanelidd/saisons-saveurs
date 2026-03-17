@@ -1,4 +1,5 @@
-import type {Veggie} from "@/types";
+import type {Veggie} from "@/types/veggie.types.ts";
+
 
 export const VEGGIES: Veggie[] = [
     {emoji: "🍅", name: "Tomate", months: [6, 7, 8, 9]},

@@ -1,6 +1,6 @@
 import type {Macros} from "./menu.types";
 
-export interface RecipeDetail {
+export type RecipeDetail = {
     titre: string;
     temps_prep: string | null;
     temps_cuisson: string;
