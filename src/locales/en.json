@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "planner": "My menu",
+    "favs":    "Favourites"
+  },
+  "header": {
+    "title":    "Saisons & Saveurs",
+    "subtitle": "Balanced menus based on seasonal vegetables"
+  },
+  "planner": {
+    "month":          "Month",
+    "vegetables":     "Seasonal vegetables",
+    "veggieSubtitle": "{{month}} · {{season}} · {{count}} vegetables",
+    "hint_zero":      "⚠️ Select at least one vegetable",
+    "hint_one":       "{{count}} vegetable selected",
+    "hint_other":     "{{count}} vegetables selected",
+    "diet":           "Diet",
+    "persons":        "People",
+    "days":           "Duration",
+    "generate":       "✨ Generate my balanced menu",
+    "generating":     "⏳ Searching for recipes…",
+    "refresh":        "🔄 Generate a different menu",
+    "searching":      "Searching for the best seasonal recipes…",
+    "error":          "Generation failed. Check your API key and try again."
+  },
+  "diet": {
+    "omnivore":    "🍖 Omnivore",
+    "vegetarien":  "🥦 Vegetarian",
+    "vegan":       "🌱 Vegan",
+    "sans-gluten": "🌾 Gluten free"
+  },
+  "persons": {
+    "one":  "👤 1 person",
+    "two":  "👥 2 people",
+    "four": "👨‍👩‍👧‍👦 4 people"
+  },
+  "daysOption": {
+    "three": "3 days",
+    "five":  "5 days",
+    "seven": "7 days"
+  },
+  "meal": {
+    "lunch":   "Lunch",
+    "dinner":  "Dinner",
+    "kcal":    "🔥 {{value}} kcal",
+    "protein": "🥩 P: {{value}}g",
+    "carbs":   "🌾 C: {{value}}g",
+    "fat":     "🫒 F: {{value}}g"
+  },
+  "nutrition": {
+    "kcalDay":  "🔥 {{value}} kcal",
+    "proteins": "Protein {{value}}g",
+    "carbs":    "Carbs {{value}}g",
+    "fat":      "Fat {{value}}g"
+  },
+  "recipe": {
+    "open":        "📖 Recipe",
+    "close":       "✕ Close",
+    "loading":     "Loading recipe…",
+    "error":       "⚠️ Could not load recipe.",
+    "source":      "View original recipe ↗",
+    "prep":        "⏱ Prep {{value}}",
+    "cook":        "🔥 {{value}}",
+    "ingredients": "Ingredients",
+    "steps":       "Preparation"
+  },
+  "difficulty": {
+    "easy":   "⭐ Easy",
+    "medium": "⭐⭐ Medium",
+    "hard":   "⭐⭐⭐ Complex"
+  },
+  "favs": {
+    "save":   "Save",
+    "remove": "Remove from favourites",
+    "title":  "Saved menus",
+    "empty":  "No saved menus yet.\nClick 🤍 to save a day.",
+    "meta":   "{{persons}} people · {{diet}} · {{date}}",
+    "delete": "🗑 Delete"
+  },
+  "season": {
+    "spring": "Spring 🌸",
+    "summer": "Summer ☀️",
+    "autumn": "Autumn 🍂",
+    "winter": "Winter ❄️"
+  },
+  "months": {
+    "short": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "full":  ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  }
+}
