@@ -29,7 +29,7 @@ export default function App() {
                 {/* Tabs + LangSwitcher */}
                 <div className={s.topBar}>
                     <div className={s.tabsBar}>
-                        {(["planner", "favs"] as Tab[]).map((id, i) => (
+                        {(["planner", "favs"] as Tab[]).map((id) => (
                             <button
                                 key={id}
                                 onClick={() => setTab(id)}
