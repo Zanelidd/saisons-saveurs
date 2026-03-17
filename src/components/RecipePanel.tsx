@@ -58,8 +58,8 @@ RecipePanel.Panel = function RecipePanelContent() {
     const { data: recipe, isLoading, isError }      = useRecipe(ctx.open ? ctx.recipeId : null);
 
     const difficultyKey =
-        recipe?.difficulte === "Facile" || recipe?.difficulte === "Easy"   ? "difficulty.easy"   :
-            recipe?.difficulte === "Moyen"  || recipe?.difficulte === "Medium" ? "difficulty.medium" :
+        recipe?.difficulte === "Facile"  ? "difficulty.easy"   :
+            recipe?.difficulte === "Moyen"   ? "difficulty.medium" :
                 "difficulty.hard";
 
     return (
